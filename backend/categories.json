@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Animals",
+        "slug": "animals",
+        "parent": 0,
+        "description": "",
+        "display": "default",
+        "image": {
+            "id": 100,
+            "date_created": "2020-03-28T09:30:00",
+            "date_created_gmt": "2020-03-28T09:30:00",
+            "date_modified": "2020-03-28T09:30:00",
+            "date_modified_gmt": "2020-03-28T09:30:00",
+            "src": "/toy_store.jpg",
+            "name": "toy_store",
+            "alt": ""
+        },
+        "menu_order": 0,
+        "count": 10,
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/localhost:3000\/products\/categories\/1"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/localhost:3000\/products\/categories"
+                }
+            ]
+        }
+    },
+{
+        "id": 2,
+        "name": "Sea Creatures",
+        "slug": "sea-creatures",
+        "parent": 0,
+        "description": "",
+        "display": "default",
+        "image": {
+            "id": 101,
+            "date_created": "2020-03-28T09:30:00",
+            "date_created_gmt": "2020-03-28T09:30:00",
+            "date_modified": "2020-03-28T09:30:00",
+            "date_modified_gmt": "2020-03-28T09:30:00",
+            "src": "/ocean.jpg",
+            "name": "ocean",
+            "alt": ""
+        },
+        "menu_order": 0,
+        "count": 10,
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/localhost:3000\/products\/categories\/2"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/localhost:3000\/products\/categories"
+                }
+            ]
+        }
+    },
+{
+        "id": 3,
+        "name": "Walking on Four Legs",
+        "slug": "walking-on-four-legs",
+        "parent": 0,
+        "description": "",
+        "display": "default",
+        "image": {
+            "id": 102,
+            "date_created": "2020-03-28T09:30:00",
+            "date_created_gmt": "2020-03-28T09:30:00",
+            "date_modified": "2020-03-28T09:30:00",
+            "date_modified_gmt": "2020-03-28T09:30:00",
+            "src": "/walking_on_four.jpg",
+            "name": "walking_on_four",
+            "alt": ""
+        },
+        "menu_order": 0,
+        "count": 10,
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/localhost:3000\/products\/categories\/3"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/localhost:3000\/products\/categories"
+                }
+            ]
+        }
+    }
+]

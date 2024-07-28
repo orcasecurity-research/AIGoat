@@ -1,0 +1,74 @@
+name: 'Terraform Destroy'
+
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: "us-east-1"
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./terraform
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set Account ID
+      id: account
+      run: |
+        echo "ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)" >> $GITHUB_OUTPUT
+
+    - name: Check for existing state file
+      id: check_state
+      run: |
+        if aws s3api head-object --bucket aigoat-state-files-${{ steps.account.outputs.ACCOUNT_ID }} --key terraform.tfstate 2>/dev/null; then
+          echo "State file exists. Will use existing state."
+          echo "STATE_EXISTS=true" >> $GITHUB_OUTPUT
+        else
+          echo "No state file found. Cannot destroy resources without state."
+          echo "STATE_EXISTS=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3
+
+    - name: Install boto3
+      run: pip install boto3
+
+    - name: Terraform Destroy Operations
+      id: destroy
+      run: |
+        if [[ "${{ steps.check_state.outputs.STATE_EXISTS }}" == "true" ]]; then
+          aws s3 cp s3://aigoat-state-files-${{ steps.account.outputs.ACCOUNT_ID }}/terraform.tfstate ./terraform.tfstate || true
+          
+          # Terraform Init
+          terraform init
+          
+          # Terraform Destroy
+          if terraform destroy -auto-approve -input=false; then
+            echo "DESTROY_SUCCESS=true" >> $GITHUB_OUTPUT
+          else
+            echo "DESTROY_SUCCESS=false" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "No state file found. Skipping destroy operation."
+          echo "DESTROY_SUCCESS=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Remove tfstate from S3
+      if: steps.destroy.outputs.DESTROY_SUCCESS == 'true'
+      run: |
+        aws s3 rm s3://aigoat-state-files-${{ steps.account.outputs.ACCOUNT_ID }}/terraform.tfstate

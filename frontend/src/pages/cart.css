@@ -1,0 +1,147 @@
+.cart-item {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.cart-item.deleting {
+  opacity: 0.5;
+}
+
+.cart-item .featured-pp {
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 767px) {
+  .cart-item .featured-pp {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cart-item .featured-pp {
+    width: 30%;
+  }
+}
+
+.cart-item .featured-pp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item .description {
+  width: 315px;
+  padding-left: 15px;
+}
+
+@media (max-width: 767px) {
+  .cart-item .description {
+    width: 80%;
+  }
+}
+
+@media (max-width: 520px) {
+  .cart-item .description {
+    width: 70%;
+  }
+}
+
+.cart-item .description div span:last-child {
+  color: #1890ff; /* Replace with actual primary color */
+}
+
+.cart-item .quantity-control {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.cart-item .quantity-control input {
+  text-align: center;
+}
+
+@media (max-width: 320px) {
+  .cart-item .quantity-control {
+    width: 50%;
+  }
+}
+
+.cart-item .quantity {
+  width: 20%;
+}
+
+.cart-item .delete {
+  width: 150px;
+}
+
+.cart-item .delete span {
+  font-size: 20px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.cart-item .delete span:hover {
+  opacity: 1;
+}
+
+@media (max-width: 320px) {
+  .cart-item .delete {
+    width: 50%;
+  }
+}
+
+.cart-item .subtotal {
+  width: 20%;
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+}
+
+.cart-wrapper .ant-col {
+  padding: 20px;
+}
+
+.cart-wrapper .product-categories-skeleton {
+  flex-flow: column wrap;
+}
+
+.cart-wrapper .product-categories-skeleton .ant-col {
+  width: 100%;
+  max-width: 100%;
+}
+
+.cart-wrapper .product-categories-skeleton .ant-col span.ant-skeleton-avatar-square {
+  height: 102px;
+}
+
+.cart-wrapper .cart-list .cart-item {
+  border: 1px solid #f0f0f0;
+}
+
+.cart-wrapper .order-summary {
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+}
+
+.cart-wrapper .order-summary div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.cart-wrapper .order-summary div span {
+  font-size: 18px;
+}
+
+.cart-wrapper .order-summary div span:last-child {
+  color: #1890ff; /* Replace with actual primary color */
+  font-size: 20px;
+}
+
+.cart-wrapper .order-summary button {
+  width: 100%;
+  margin-top: 25px;
+}
