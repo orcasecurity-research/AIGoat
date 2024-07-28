@@ -1,0 +1,92 @@
+name: 'Terraform Apply'
+
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: "us-east-1"
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./terraform
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set Account ID
+      id: account
+      run: |
+        echo "ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)" >> $GITHUB_OUTPUT
+
+    - name: Create S3 bucket for Terraform state
+      run: |
+        BUCKET_NAME="aigoat-state-files-${{ steps.account.outputs.ACCOUNT_ID }}"
+        if ! aws s3api head-bucket --bucket "$BUCKET_NAME" 2>/dev/null; then
+          echo "Creating S3 bucket: $BUCKET_NAME"
+          aws s3api create-bucket --bucket "$BUCKET_NAME" --region $AWS_REGION
+        else
+          echo "S3 bucket already exists: $BUCKET_NAME"
+        fi
+
+    - name: Check for existing state file
+      id: check_state
+      run: |
+        if aws s3api head-object --bucket aigoat-state-files-${{ steps.account.outputs.ACCOUNT_ID }} --key terraform.tfstate 2>/dev/null; then
+          echo "State file exists. Will use existing state."
+          echo "STATE_EXISTS=true" >> $GITHUB_OUTPUT
+        else
+          echo "No state file found. Will create new deployment."
+          echo "STATE_EXISTS=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3
+
+    - name: Install boto3
+      run: pip install boto3
+
+    - name: Terraform Operations
+      run: |
+        set -e  # Exit immediately if a command exits with a non-zero status
+        
+        # Retrieve existing state if it exists
+        if [[ "${{ steps.check_state.outputs.STATE_EXISTS }}" == "true" ]]; then
+          aws s3 cp s3://aigoat-state-files-${{ steps.account.outputs.ACCOUNT_ID }}/terraform.tfstate ./terraform.tfstate || true
+        fi
+        
+        # Terraform Init
+        terraform init
+        
+        # Terraform Plan
+        terraform plan -input=false
+        
+        # Terraform Apply
+        terraform apply -auto-approve -input=false
+        
+    - name: Terraform Output
+      id: tf_output
+      run: |
+        BUCKET_URL=$(terraform output -raw bucket_url || echo "No bucket_url output")
+        echo "BUCKET_URL=$BUCKET_URL" >> $GITHUB_OUTPUT
+
+    - name: Display Bucket URL
+      run: |
+        echo "Bucket URL: ${{ steps.tf_output.outputs.BUCKET_URL }}"
+
+    - name: Copy state file to S3
+      if: always()
+      run: |
+        aws s3 cp ./terraform.tfstate s3://aigoat-state-files-${{ steps.account.outputs.ACCOUNT_ID }}/terraform.tfstate

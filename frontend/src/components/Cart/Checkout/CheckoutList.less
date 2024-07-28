@@ -1,0 +1,45 @@
+.checkout-list {
+  .table-heading {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 16px;
+    margin-bottom: 20px;
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    & > div:not(:first-child) {
+      width: 20%;
+      color: #bbb;
+    }
+    & > div:first-child {
+      width: 385px;
+      padding-left: 10px;
+    }
+    & > div:last-child {
+      color: #bbb;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+  .overall-total-price {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    padding: 25px;
+    background: #f7f7f7;
+    justify-content: flex-end;
+    div {
+      width: 25%;
+      font-size: 15px;
+      @media (max-width: 767px) {
+        width: 35%;
+      }
+      span {
+        font-size: 30px;
+        margin-left: 10px;
+        color: @primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.product-wrapper {
+  max-width: 700px;
+  margin: 50px auto;
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
+  .product-image {
+    background-color: #ededed;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .product-description {
+    padding-left: 25px;
+    @media (max-width: 700px) {
+      padding-right: 25px;
+    }
+    .price-description {
+      span.ant-typography {
+        font-size: 30px;
+        &:not(.on_sale) {
+          color: @primary-color;
+        }
+      }
+    }
+    .ant-descriptions-title {
+      font-size: 35px;
+    }
+    .ant-descriptions-item-label {
+      font-size: 18px;
+    }
+  }
+}

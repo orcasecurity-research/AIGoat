@@ -1,0 +1,10 @@
+flask
+Flask-CORS
+PyJWT
+flask_sqlalchemy
+psycopg2-binary
+requests
+urllib3<2.0
+Pillow
+boto3
+scikit-learn

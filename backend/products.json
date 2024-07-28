@@ -1,0 +1,1933 @@
+[
+    {
+        "id": 1,
+        "name": "Hedgehog Doll",
+        "slug": "hedgehog-doll",
+        "permalink": "http://localhost:3000/product/1/hedgehog-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A cute and cuddly hedgehog doll perfect for snuggling.",
+        "short_description": "A cute and cuddly hedgehog doll perfect for snuggling.",
+        "sku": "HEDGEHOG-DOLL",
+        "price": "15",
+        "regular_price": "15",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0,
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Animals",
+                "slug": "animals"
+            }
+        ],
+        "comments": [
+                {
+                    "author": "Han Solo",
+                    "avatar": "/icon-goat.jpg",
+                    "content": "This looks great...",
+                    "datetime": "2023-01-01T10:00:00Z"
+                },
+                {
+                    "author": "Han Solo",
+                    "avatar": "/icon-goat.jpg",
+                    "content": "Why are there no comments?",
+                    "datetime": "2023-01-01T11:00:00Z"
+                }
+            ],
+        "tags": [],
+        "images": [
+            {
+                "id": 1,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/hedgehog_doll.jpg",
+                "name": "hedgehog_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/1"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "name": "Orca Doll",
+        "slug": "orca-doll",
+        "permalink": "http://localhost:3000/product/2/orca-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": false,
+        "description": "A delightful orca doll that's great for ocean lovers.",
+        "short_description": "A delightful orca doll that's great for ocean lovers.",
+        "sku": "ORCA-DOLL",
+        "price": "30",
+        "regular_price": "30",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0,
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 2,
+                "name": "Sea Creatures",
+                "slug": "sea-creatures"
+            }
+        ],
+       "comments": [
+        {
+            "author": "Shalom",
+            "avatar": "/icon-goat.jpg",
+            "content": "Love this!",
+            "datetime": "2023-01-01T10:00:00Z"
+        },
+        {
+            "author": "Orca Fan",
+            "avatar": "/icon-goat.jpg",
+            "content": "Have you tried looking at the comments API?",
+            "datetime": "2023-01-01T11:00:00Z"
+        }
+    ],
+        "tags": [],
+        "images": [
+            {
+                "id": 2,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/orca_doll.jpg",
+                "name": "orca_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/2"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "name": "Unicorn Doll",
+        "slug": "unicorn-doll",
+        "permalink": "http://localhost:3000/product/3/unicorn-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A magical unicorn doll that brings a touch of fantasy.",
+        "short_description": "A magical unicorn doll that brings a touch of fantasy.",
+        "sku": "UNICORN-DOLL",
+        "price": "18",
+        "regular_price": "18",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0,
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "comments": [
+                {
+                    "author": "Baby Shark",
+                    "avatar": "/icon-goat.jpg",
+                    "content": "Wow, this is amazing!",
+                    "datetime": "2023-01-01T10:00:00Z"
+                },
+                {
+                    "author": "Doo Doo",
+                    "avatar": "/icon-goat.jpg",
+                    "content": "Why are there no comments?",
+                    "datetime": "2023-01-01T11:00:00Z"
+                }
+            ],
+        "tags": [],
+        "images": [
+            {
+                "id": 3,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/unicorn_doll.jpg",
+                "name": "unicorn_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/3"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "name": "Monkey Doll",
+        "slug": "monkey-doll",
+        "permalink": "http://localhost:3000/product/4/monkey-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "An adorable monkey doll that's full of fun.",
+        "short_description": "An adorable monkey doll that's full of fun.",
+        "sku": "MONKEY-DOLL",
+        "price": "12",
+        "regular_price": "15",
+        "sale_price": "12",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Animals",
+                "slug": "animals"
+            }
+        ],
+        "comments": [
+            {
+                "author": "Doo Doo",
+                "avatar": "/icon-goat.jpg",
+                "content": "Why can't I write comments?",
+                "datetime": "2023-01-01T11:00:00Z"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 4,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/monkey_doll.jpg",
+                "name": "monkey_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/4"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "name": "Fox Doll",
+        "slug": "fox-doll",
+        "permalink": "http://localhost:3000/product/5/fox-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A charming fox doll with a fluffy tail.",
+        "short_description": "A charming fox doll with a fluffy tail.",
+        "sku": "FOX-DOLL",
+        "price": "20",
+        "regular_price": "20",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 5,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/fox_doll.jpg",
+                "name": "fox_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/5"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "name": "Zebra Doll",
+        "slug": "zebra-doll",
+        "permalink": "http://localhost:3000/product/6/zebra-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A striped zebra doll that's simply adorable.",
+        "short_description": "A striped zebra doll that's simply adorable.",
+        "sku": "ZEBRA-DOLL",
+        "price": "10",
+        "regular_price": "12",
+        "sale_price": "10",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 6,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/zebra_doll.jpg",
+                "name": "zebra_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/6"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "name": "Husky Doll",
+        "slug": "husky-doll",
+        "permalink": "http://localhost:3000/product/7/husky-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A plush husky doll that's perfect for dog lovers.",
+        "short_description": "A plush husky doll that's perfect for dog lovers.",
+        "sku": "HUSKY-DOLL",
+        "price": "20",
+        "regular_price": "20",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 7,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/husky_doll.jpg",
+                "name": "husky_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/7"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "name": "Lion Doll",
+        "slug": "lion-doll",
+        "permalink": "http://localhost:3000/product/8/lion-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A majestic lion doll that's soft and huggable.",
+        "short_description": "A majestic lion doll that's soft and huggable.",
+        "sku": "LION-DOLL",
+        "price": "20",
+        "regular_price": "20",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 8,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/lion_doll.jpg",
+                "name": "lion_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/8"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "name": "Bear Doll",
+        "slug": "bear-doll",
+        "permalink": "http://localhost:3000/product/9/bear-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A classic bear doll that's perfect for bedtime cuddles.",
+        "short_description": "A classic bear doll that's perfect for bedtime cuddles.",
+        "sku": "BEAR-DOLL",
+        "price": "20",
+        "regular_price": "20",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Animals",
+                "slug": "animals"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 9,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/bear_doll.jpg",
+                "name": "bear_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/9"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "name": "Ladybug Doll",
+        "slug": "ladybug-doll",
+        "permalink": "http://localhost:3000/product/10/ladybug-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A cute ladybug doll with bright red spots.",
+        "short_description": "A cute ladybug doll with bright red spots.",
+        "sku": "LADYBUG-DOLL",
+        "price": "11",
+        "regular_price": "11",
+        "sale_price": "7",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Animals",
+                "slug": "animals"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 10,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/ladybug_doll.jpg",
+                "name": "ladybug_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/10"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "name": "Sheep Doll",
+        "slug": "sheep-doll",
+        "permalink": "http://localhost:3000/product/11/sheep-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A fluffy sheep doll that's perfect for snuggling.",
+        "short_description": "A fluffy sheep doll that's perfect for snuggling.",
+        "sku": "SHEEP-DOLL",
+        "price": "21",
+        "regular_price": "21",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 11,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/sheep_doll.jpg",
+                "name": "sheep_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/11"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "name": "Chicken Doll",
+        "slug": "chicken-doll",
+        "permalink": "http://localhost:3000/product/12/chicken-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A charming chicken doll that's full of character.",
+        "short_description": "A charming chicken doll that's full of character.",
+        "sku": "CHICKEN-DOLL",
+        "price": "20",
+        "regular_price": "20",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+         "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 12,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/chicken_doll.jpg",
+                "name": "chicken_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/12"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 13,
+        "name": "Cat Doll",
+        "slug": "cat-doll",
+        "permalink": "http://localhost:3000/product/13/cat-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A cute cat doll that's perfect for cat lovers.",
+        "short_description": "A cute cat doll that's perfect for cat lovers.",
+        "sku": "CAT-DOLL",
+        "price": "16",
+        "regular_price": "16",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 13,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/cat_doll.jpg",
+                "name": "cat_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/13"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "name": "Red Panda Doll",
+        "slug": "red-panda-doll",
+        "permalink": "http://localhost:3000/product/14/red-panda-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "An adorable red panda doll that's great for hugs.",
+        "short_description": "An adorable red panda doll that's great for hugs.",
+        "sku": "RED-PANDA-DOLL",
+        "price": "17",
+        "regular_price": "20",
+        "sale_price": "17",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Animals",
+                "slug": "animals"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 14,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/red_panda_doll.jpg",
+                "name": "red_panda_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/14"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "name": "Rabbit Doll",
+        "slug": "rabbit-doll",
+        "permalink": "http://localhost:3000/product/15/rabbit-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A sweet rabbit doll that's perfect for Easter.",
+        "short_description": "A sweet rabbit doll that's perfect for Easter.",
+        "sku": "RABBIT-DOLL",
+        "price": "24",
+        "regular_price": "24",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 15,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/rabbit_doll.jpg",
+                "name": "rabbit_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/15"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 16,
+        "name": "Turtle Doll",
+        "slug": "turtle-doll",
+        "permalink": "http://localhost:3000/product/16/turtle-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A slow and steady turtle doll that's very cute.",
+        "short_description": "A slow and steady turtle doll that's very cute.",
+        "sku": "TURTLE-DOLL",
+        "price": "20",
+        "regular_price": "20",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 2,
+                "name": "Sea Creatures",
+                "slug": "sea-creatures"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 16,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/turtle_doll.jpg",
+                "name": "turtle_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/16"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 17,
+        "name": "Panda Doll",
+        "slug": "panda-doll",
+        "permalink": "http://localhost:3000/product/17/panda-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A cuddly panda doll that's perfect for bear lovers.",
+        "short_description": "A cuddly panda doll that's perfect for bear lovers.",
+        "sku": "PANDA-DOLL",
+        "price": "19",
+        "regular_price": "25",
+        "sale_price": "19",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Animals",
+                "slug": "animals"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 17,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/panda_doll.jpg",
+                "name": "panda_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/17"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 18,
+        "name": "Elephant Doll",
+        "slug": "elephant-doll",
+        "permalink": "http://localhost:3000/product/18/elephant-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A gentle elephant doll that's great for big hugs.",
+        "short_description": "A gentle elephant doll that's great for big hugs.",
+        "sku": "ELEPHANT-DOLL",
+        "price": "40",
+        "regular_price": "40",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0, 
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 3,
+                "name": "Walking on Four Legs",
+                "slug": "walking-on-four-legs"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 18,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/elephant_doll.jpg",
+                "name": "elephant_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/18"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    },
+    {
+        "id": 19,
+        "name": "Penguin Doll",
+        "slug": "penguin-doll",
+        "permalink": "http://localhost:3000/product/19/penguin-doll/",
+        "date_created": "2020-03-28T08:56:59",
+        "date_created_gmt": "2020-03-28T08:56:59",
+        "date_modified": "2020-03-28T08:56:59",
+        "date_modified_gmt": "2020-03-28T08:56:59",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": true,
+        "description": "A cute penguin doll that's perfect for cold climates.",
+        "short_description": "A cute penguin doll that's perfect for cold climates.",
+        "sku": "PENGUIN-DOLL",
+        "price": "10",
+        "regular_price": "10",
+        "sale_price": "",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&pound;</span>20.00</span>",
+        "on_sale": false,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": 0,
+        "download_expiry": 0,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "stock_status": "instock",
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0,
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 2,
+                "name": "Sea Creatures",
+                "slug": "sea-creatures"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 19,
+                "date_created": "2020-03-28T08:56:57",
+                "date_created_gmt": "2020-03-28T08:56:57",
+                "date_modified": "2020-03-28T08:56:57",
+                "date_modified_gmt": "2020-03-28T08:56:57",
+                "src": "/images/toys/penguin_doll.jpg",
+                "name": "penguin_doll.jpg",
+                "alt": ""
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "meta_data": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://localhost:3000/products/19"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://localhost:3000/products"
+                }
+            ]
+        }
+    }
+]

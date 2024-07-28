@@ -1,0 +1,142 @@
+.cart-item {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 25px;
+  padding: 10px;
+
+  &.deleting {
+    opacity: 0.5;
+  }
+
+  .featured-pp {
+    width: 80px;
+    height: 80px;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 520px) {
+      width: 30%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .description {
+    width: 315px;
+    @media (max-width: 767px) {
+      width: 80%;
+    }
+    @media (max-width: 520px) {
+      width: 70%;
+    }
+    padding-left: 15px;
+
+    div {
+      span:last-child {
+        color: @primary-color;
+      }
+    }
+  }
+  .quantity-control {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    input {
+      text-align: center;
+    }
+    @media (max-width: 320px) {
+      width: 50%;
+    }
+  }
+  .quantity {
+    .quantity-control();
+    width: 20%;
+  }
+  .delete {
+    .quantity-control();
+    width: 150px;
+    span {
+      font-size: 20px;
+      opacity: 0.6;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 320px) {
+      width: 50%;
+    }
+  }
+  .subtotal {
+    .delete();
+    width: 20%;
+    font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+  }
+}
+
+.cart-wrapper {
+  .ant-col {
+    padding: 20px;
+    .product-categories-skeleton {
+      flex-flow: column wrap;
+      .ant-col {
+        width: 100%;
+        max-width: 100%;
+        span.ant-skeleton-avatar-square {
+          height: 102px;
+        }
+      }
+    }
+    .cart-list {
+      .cart-item {
+        border: 1px solid #f0f0f0;
+      }
+    }
+
+    .order-summary {
+      border: 1px solid #f0f0f0;
+      padding: 10px;
+
+      div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        span {
+          font-size: 18px;
+          &:last-child {
+            color: @primary-color;
+            font-size: 20px;
+          }
+        }
+      }
+      button {
+        width: 100%;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+.suggested-products-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suggested-products-title {
+  margin: 0;
+}
+
+.suggested-products-subtitle {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  margin: 0;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+}
