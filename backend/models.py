@@ -1,5 +1,4 @@
 from flask_sqlalchemy import SQLAlchemy
-# from app import db
 
 db = SQLAlchemy()
 
@@ -60,8 +59,6 @@ class Product(db.Model):
     reviews_allowed = db.Column(db.Boolean, default=True)
     average_rating = db.Column(db.Float, default=0.0)
     rating_count = db.Column(db.Integer, default=0)
-    # upsell_ids = db.Column(db.ARRAY(db.Integer))
-    # cross_sell_ids = db.Column(db.ARRAY(db.Integer))
     parent_id = db.Column(db.Integer, default=0)
     purchase_note = db.Column(db.String(255))
     categories = db.relationship('Category', secondary='product_categories', lazy='subquery')
@@ -128,9 +125,6 @@ class Product(db.Model):
             "reviews_allowed": self.reviews_allowed,
             "average_rating": self.average_rating,
             "rating_count": self.rating_count,
-            # "related_ids": self.related_ids,
-            # "upsell_ids": self.upsell_ids,
-            # "cross_sell_ids": self.cross_sell_ids,
             "parent_id": self.parent_id,
             "purchase_note": self.purchase_note,
             "categories": [category.to_dict() for category in self.categories],
@@ -187,9 +181,9 @@ class Category(db.Model):
 
 
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)  # Primary key
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
-    cart = db.Column(db.PickleType, nullable=False, default=[])  # Use PickleType for complex data types
+    cart = db.Column(db.PickleType, nullable=False, default=[])
     recommendations = db.Column(db.PickleType, nullable=False, default=[])
 
     def to_dict(self):

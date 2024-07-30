@@ -15,9 +15,10 @@
   * [Usage](#Usage)
   * [Manual Installation](#Manual-Installation)
 * [Challenges](#Challenges)
+* [Hints](#Hints)
+* [Solutions](#Solutions)
 * [Pricing](#Pricing)
 * [Contributors](#Contributors)
-* [Solutions](#Solutions)
 * [Presented at](#Presented-at)
 * [Contribution Guidelines](#Contribution-Guidelines)
 * [License](#License)
@@ -156,6 +157,19 @@ TBD Image
   <img src="architecture image">
 </p>
 
+# Hints
+
+If you feel like you're stuck and want some help - we created hints for each challenge. To access the hints, you can use the following API endpoints:
+<backend_ip>/hints/challenge1/<1,2,3>
+<backend_ip>/hints/challenge2/<1,2,3>
+<backend_ip>/hints/challenge3/<1,2,3>
+
+# Solutions
+
+Spoiler alert! Avoid browsing the repository files as they contain spoilers :smiley:.
+
+The solutions are available in the [solutions](solutions/) directory.
+
 
 # Pricing
 
@@ -163,17 +177,12 @@ The resources created with the deployment of AIGoat will have the following char
 
 Total: **$0.9/hour** - TBD
 
+
 # Contributors
 
 Ofir Yakobi, Security Researcher, Orca Security  <ofir.yakobi@orca.security>
 
 Shir Sadon, Security Researcher, Orca Security <shir.sadon@orca.security>
-
-# Solutions
-
-Spoiler alert! Avoid browsing the repository files as they contain spoilers :smiley:.
-
-The solutions are available in the [solutions](solutions/) directory.
 
 ## Presented at
 

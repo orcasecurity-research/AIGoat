@@ -5,14 +5,10 @@ from flask import Flask
 from models import db, Product, Category, User, Comment
 from datetime import datetime
 
-# Ensure the script can find the app module
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{os.getenv("DB_USER", "pos_user")}:{os.getenv("DB_PASSWORD", "password123")}@{os.getenv("DB_HOST", "localhost")}:5432/{os.getenv("DB_NAME", "rds-database")}'
-# app.configEnv['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///site.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# db.init_app(app)
 
 
 def parse_args():
@@ -39,7 +35,7 @@ def safe_convert(value, target_type=float):
 
 def parse_datetime(date_str):
     if date_str:
-        return datetime.fromisoformat(date_str.rstrip('Z'))  # Strip 'Z' if it's a UTC time
+        return datetime.fromisoformat(date_str.rstrip('Z'))
     return None
 
 def safe_float(value):
@@ -67,7 +63,7 @@ def migrate_products(products):
             categories.append(category)
 
         product = Product(
-            id=int(product_data['id']),  # Assuming id is always present and valid.
+            id=int(product_data['id']),
             name=product_data['name'],
             slug=product_data['slug'],
             permalink=product_data['permalink'],
@@ -129,7 +125,6 @@ def migrate_products(products):
             grouped_products=product_data['grouped_products'],
             meta_data=product_data['meta_data'],
             acf=product_data['acf'],
-            # _links=product_data['_links'],
         )
         db.session.add(product)
         for comment_data in product_data.get('comments', []):
@@ -150,7 +145,6 @@ def migrate_categories(categories):
     for category_data in categories:
         existing_category = db.session.get(Category, category_data['id'])
         if existing_category:
-            # Update existing category
             existing_category.name = category_data['name']
             existing_category.slug = category_data['slug']
             existing_category.parent = category_data['parent']
@@ -165,7 +159,6 @@ def migrate_categories(categories):
             existing_category.self_link = category_data['_links']['self'][0]['href']
             existing_category.collection_link = category_data['_links']['collection'][0]['href']
         else:
-            # Create new category
             new_category = Category(
                 id=category_data['id'],
                 name=category_data['name'],
@@ -207,7 +200,7 @@ if __name__ == "__main__":
         args = parse_args()
         configure_app(app, args.db_user, args.db_password, args.db_host, args.db_name)
         db.init_app(app)
-        db.create_all()  # Ensure tables are created
+        db.create_all()
         migrate_products(load_json('products.json'))
         migrate_categories(load_json('categories.json'))
         migrate_users(load_json('user_data.json'))
