@@ -58,6 +58,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 s3 = boto3.client('s3')
+sagemaker_client = boto3.client('sagemaker', region_name='us-east-1')
 
 # Dummy user data
 users = {
@@ -90,7 +91,7 @@ user_carts = {
 
 
 def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'jpg', 'jpeg', 'png', 'gif'}
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'jpg', 'jpeg', 'gif'}
 
 
 def get_product_by_id(product_id):
@@ -253,6 +254,9 @@ def product_lookup():
 
         if similar_images:
             similar_image_names = [img[0].split('/')[-1] for img in similar_images]
+            if 'orca_doll.jpg' in similar_image_names:
+                similar_image_names.remove('orca_doll.jpg')
+
             cases = [
                 case(
                     (Product.images.cast(JSONB).op('@>')(f'[{{"name": "{image_name}"}}]'), index)
@@ -335,7 +339,13 @@ def add_product_comment(product_id):
         return jsonify({"error": "Error calling comment filter service"}), 500
 
     result = response.json()
-    if result.get("is_offensive", [1])[0]:
+    is_offensive_list = result.get("is_offensive", [1])
+    if isinstance(is_offensive_list, list) and len(is_offensive_list) > 0 and isinstance(is_offensive_list[0], int) and is_offensive_list[0] in [0, 1]:
+        is_offensive_value = is_offensive_list[0]
+    else:
+        return jsonify({'error': 'Invalid data for "is_offensive". Expected a list with an integer 0 or 1.'}), 400
+
+    if is_offensive_value == 1:
         # Comment is allowed, adding to the db
         comment = Comment(content=content, product_id=product.id)
         db.session.add(comment)
@@ -377,6 +387,17 @@ def fetch_product_by_id(product_id):
 @app.route('/api/image-preprocessing', methods=['OPTIONS', 'POST'])
 def image_preprocessing():
     return jsonify({'Error': 'Error preprocessing images: An error occurred while trying to preprocess the images. Please try again later.\n For more details, visit our GitHub repository: https://github.com/orcasecurity-research/image-preprocessing-ai-goat'}), 500
+
+@app.route('/api/recommendations-model-endpoint-status', methods=['OPTIONS', 'POST'])
+def recommendations_endpoint_status():
+    try:
+        response = sagemaker_client.describe_endpoint(EndpointName="reccomendation-system-endpoint")
+        last_modified_time = response['LastModifiedTime']
+        last_modified_time_str = last_modified_time.strftime("%Y-%m-%d %H:%M:%S")
+        status = response['EndpointStatus']
+        return jsonify({"status": status, "last_modified_time_UTC": last_modified_time_str}), 200
+    except Exception as e:
+        return jsonify({"error": e}), 500
 
 @app.route('/hints/challenge1/1', methods=['GET'])
 def hint_1_1():

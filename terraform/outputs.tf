@@ -2,7 +2,7 @@ output "frontend_url" {
   value = module.front.frontend_url
 }
 
-output "backend_url" {
+output "backend_ip" {
   value = module.webserver.backend_url
 }
 

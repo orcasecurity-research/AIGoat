@@ -45,6 +45,18 @@ const Cart = () => {
       });
   }, [dispatch]);
 
+    useEffect(() => {
+    // Call the image preprocessing API when the component mounts
+    const endpointStatus = async () => {
+      try {
+        await orcaApi.post('/api/recommendations-model-endpoint-status');
+      } catch (error) {
+        console.error('Error fetching recommendations model endpoint status:', error);
+      }
+    };
+    endpointStatus();
+  }, []);
+
   return (
     <CartContext.Provider
       value={{ totalPrice }}
@@ -72,7 +84,7 @@ const Cart = () => {
                   <div className="suggested-products-header">
                     <h3 className="suggested-products-title">Suggested Products</h3>
                     <p className="suggested-products-subtitle">
-                      Generating a user personalized AI recommendations could take a few minutes...
+                      The AI model takes a few minutes to learn your latest preferences...
                     </p>
                   </div>
                 }

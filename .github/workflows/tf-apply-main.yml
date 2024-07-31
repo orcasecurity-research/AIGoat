@@ -76,15 +76,13 @@ jobs:
         # Terraform Apply
         terraform apply -auto-approve -input=false
         
-    - name: Terraform Output
+    - name: Display Terraform Outputs
       id: tf_output
       run: |
         BUCKET_URL=$(terraform output -raw bucket_url || echo "No bucket_url output")
-        echo "BUCKET_URL=$BUCKET_URL" >> $GITHUB_OUTPUT
-
-    - name: Display Bucket URL
-      run: |
-        echo "Bucket URL: ${{ steps.tf_output.outputs.BUCKET_URL }}"
+        BACKEND_IP=$(terraform output -raw backend_ip || echo "No backend_ip output")
+        echo "Bucket URL: $BUCKET_URL"
+        echo "Backend IP (For viewing hints): $BACKEND_IP"
 
     - name: Copy state file to S3
       if: always()

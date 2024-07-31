@@ -1,87 +1,82 @@
 import json
 import boto3
-import numpy as np
-from PIL import Image
-import io
-import base64
 import logging
+import traceback
 
-
+# Initialize logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 # Initialize SageMaker runtime client
-sagemaker_runtime = boto3.client('sagemaker-runtime')
-s3_client = boto3.client('s3')
-
-# SageMaker endpoint name
-ENDPOINT_NAME = 'image-similarity-endpoint'
-
-
-def preprocess_image(image_bytes):
-    image = Image.open(io.BytesIO(image_bytes))
-    image = image.resize((224, 224))  # Resize the image to the required input size
-    image_array = np.array(image)
-
-    if image_array.shape[-1] == 1:  # Grayscale to RGB conversion
-        image_array = np.repeat(image_array[..., np.newaxis], 3, -1)
-
-    image_array = np.expand_dims(image_array, axis=0)  # Add batch dimension
-
-    # Convert RGB to BGR
-    image_array = image_array[..., ::-1]
-
-    # Zero-center by mean pixel values from the ImageNet dataset
-    mean = [103.939, 116.779, 123.68]
-    image_array = image_array.astype(np.float32)
-    image_array[..., 0] -= mean[0]
-    image_array[..., 1] -= mean[1]
-    image_array[..., 2] -= mean[2]
-
-    return image_array.tolist()
+runtime = boto3.client('sagemaker-runtime')
 
 
 def lambda_handler(event, context):
-    logger.info(f"Event: {event}")
     try:
-        # Extract bucket name and image key from the event
-        if 'body' in event:
-            # Parse the body of the request
-            body = json.loads(event['body'])
-            bucket_name = body.get('bucket_name')
-            img_key = body.get('img_key')
-        else:
-            # Fallback to direct invocation format
-            bucket_name = event.get('bucket_name')
-            img_key = event.get('img_key')
+        logger.info(f"Event: {event}")
 
-        # Retrieve the image from S3
-        response = s3_client.get_object(Bucket=bucket_name, Key=img_key)
-        image_bytes = response['Body'].read()
+        # Extract comment from the event
+        body = json.loads(event['body'])
+        comment = body['content']
+        author = body.get('author')
+        is_offensive = body.get('is_offensive')
+        probability = body.get('probability')
+        logger.info(f"Comment: {comment}")
 
-        # Preprocess the image
-        preprocessed_image = preprocess_image(image_bytes)
+        # Prepare the payload for the SageMaker endpoint
+        payload = {"instances": [comment]}
 
-        input_data = json.dumps({'instances': preprocessed_image})
+        # Convert payload to JSON string
+        payload_str = json.dumps(payload)
+        logger.info(f"Payload JSON String: {payload_str}")
 
-        # Invoke the SageMaker endpoint
-        response = sagemaker_runtime.invoke_endpoint(
-            EndpointName=ENDPOINT_NAME,
+        # Call the SageMaker endpoint
+        response = runtime.invoke_endpoint(
+            EndpointName='blazingtext-offensive-comments-endpoint',  # Replace with your endpoint name
             ContentType='application/json',
-            Body=input_data
+            Body=payload_str
         )
 
-        # Parse the response from SageMaker
-        response_body = response['Body'].read().decode('utf-8')
-        similar_images = json.loads(response_body)
+        # Log the response for debugging
+        logger.info(f"Response: {response}")
 
-        # Return the response
+        # Parse the response
+        result = json.loads(response['Body'].read().decode())
+        logger.info(f"Parsed result: {result}")
+
+        # Check the structure of the result and extract the prediction
+        prediction = result[0]
+        logger.info(f"Prediction: {prediction}")
+
+
+        if not is_offensive or not probability:
+            if isinstance(prediction, dict) and 'label' in prediction:
+                label = prediction['label']
+                is_offensive = [1 if (label == '__label__1' if isinstance(label, str) else label[0] == '__label__1') else 0]
+                probability = prediction.get('prob', [])
+            else:
+                is_offensive = [1 if prediction == '__label__1' else 0]
+                probability = prediction.get('prob', [])
+
         return {
             'statusCode': 200,
-            'body': json.dumps(similar_images)
+            'headers': {
+                'Content-Type': 'application/json'
+            },
+            'body': json.dumps({'author': str(author), 'comment': str(comment), 'is_offensive': is_offensive, 'probability': probability})
+        }
+    except KeyError as e:
+        logger.error(f"KeyError: {e}")
+        return {
+            'statusCode': 400,
+            'headers': {
+                'Content-Type': 'application/json'
+            },
+            'body': json.dumps({'error': f'Missing key: {str(e)}'})
         }
     except Exception as e:
         logger.error(f"Exception: {e}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
         return {
             'statusCode': 500,
             'headers': {

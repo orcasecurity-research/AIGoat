@@ -88,6 +88,12 @@ resource "aws_s3_bucket_object" "sagemaker_recommendation_data" {
   source = "resources/data_poisoning/product_ratings.csv"
 }
 
+resource "aws_s3_bucket_object" "sagemaker_recommendation_data_solution" {
+  bucket = aws_s3_bucket.sagemaker_recommendation_bucket.id
+  key    = "old_product_ratings.csv"
+  source = "resources/data_poisoning/old_product_ratings.csv"
+}
+
 resource "aws_s3_bucket_object" "sagemaker_retraining_data" {
   for_each = fileset("resources/data_poisoning/code", "**/*")
   bucket = aws_s3_bucket.sagemaker_recommendation_bucket.id
@@ -285,7 +291,7 @@ resource "aws_api_gateway_integration_response" "lambda_integration_response" {
 
 
 resource "aws_api_gateway_deployment" "api_deployment" {
-  depends_on = [aws_api_gateway_integration.lambda_integration]
+  depends_on = [aws_api_gateway_integration.lambda_integration, aws_api_gateway_integration_response.lambda_integration_response]
   rest_api_id = aws_api_gateway_rest_api.recommendation_api.id
   stage_name  = "prod"
 }

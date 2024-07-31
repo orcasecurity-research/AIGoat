@@ -32,6 +32,23 @@ data aws_iam_policy_document "s3_read_access" {
   }
 }
 
+data aws_iam_policy_document "sagemaker_access" {
+  statement {
+    actions = ["sagemaker:DescribeEndpoint", "sagemaker:InvokeEndpoint"]
+    resources = ["*"]
+  }
+}
+
+
+
+resource "aws_iam_role_policy" "sagemaker_policy" {
+  depends_on = ["aws_iam_role.ec2_iam_role"]
+  name       = "sagemaker_policy"
+  role       = aws_iam_role.ec2_iam_role.name
+
+  policy = data.aws_iam_policy_document.sagemaker_access.json
+}
+
 resource "aws_iam_role" "ec2_iam_role" {
   name = "ec2_iam_role"
 
@@ -45,6 +62,7 @@ resource "aws_iam_role_policy" "join_policy" {
 
   policy = data.aws_iam_policy_document.s3_read_access.json
 }
+
 
 resource "aws_iam_instance_profile" "ec2_profile" {
   name = "instance_profile"

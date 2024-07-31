@@ -81,10 +81,9 @@ AWS_SECRET_ACCESS_KEY
 
 **Step 4.** Find the application URL in the Terraform output section.
 
-<p align="center">
-  <img src="TBD">
-</p>
-
+<div align="center">
+  <img src="frontend/public/images/actions_terraform_output.jpg">
+</div>
 
 ### Manual Installation
 
@@ -107,21 +106,23 @@ terraform init
 terraform apply --auto-approve
 ```
 
+<p style="background-color:#843838;"><strong>Important note: To destroy the infrastructure you can use the Terraform destroy Github action/or run the command Terraform destroy if you used the manual installation. HOWEVER, please note that the destroy action will not delete the Sagemaker endpoints resources created and it should be done manually.</strong></p>
+ 
+
 # Challenges
 
 All challenges within AI-Goat are part of a toy store application featuring different machine learning functionalities. Each challenge is designed to demonstrate specific vulnerabilities from the OWASP Machine Learning Security Top 10 risks.
+
+**Machine Learning Modules Architecture:**
+<div align="center">
+  <img src="frontend/public/images/architecture.png">
+</div>
+
 
 **Challenge 1:** AI Supply Chain Attacks
 This challenge features a product search page within the application. Users can upload an image, and the ML model calculates and displays the most similar products. 
 This module highlights vulnerabilities in the AI supply chain, where attackers can compromise the pipeline due to a vulnerable package.<br />
 **Goal:** Compromise the product search functionality using the file upload option to get the sensitive information file.
-
-Architecture:
-TBD Image
-<p align="center">
-  <img src="architecture image">
-</p>
-
 
 **Challenge 2:** Data Poisoning Attack
 This challenge involves a custom product recommendations model. When a user is logged in, the cart page displays personalized product recommendations. 
@@ -133,13 +134,7 @@ password: doodoo123
 ```
 **Goal:** Manipulate the AI model to recommend a product - Orca Doll, which is not visible in the catalog for the provided user.
 
-Architecture:
-TBD Image
-<p align="center">
-  <img src="architecture image">
-</p>
-
- Note: The Orca Doll product is not visible in the catalog.
+** Note: The Orca Doll product is not visible in the catalog.
 
 **Challenge 3:** Output Integrity Attack
 For this challenge, the application features a content and spam filtering AI system that checks each comment a user attempts to add to a product page. The AI determines whether the comment is allowed or not. This module demonstrates vulnerabilities in the model output integrity, where attackers can manipulate the AI system to bypass content filtering.<br />
@@ -150,19 +145,16 @@ For this challenge, the application features a content and spam filtering AI sys
 ``` 
 Success is achieved this comment that should be filtered gets published.
 
-Architecture:
-TBD Image
-
-<p align="center">
-  <img src="architecture image">
-</p>
 
 # Hints
 
 If you feel like you're stuck and want some help - we created hints for each challenge. To access the hints, you can use the following API endpoints:
-<backend_ip>/hints/challenge1/<1,2,3>
-<backend_ip>/hints/challenge2/<1,2,3>
-<backend_ip>/hints/challenge3/<1,2,3>
+
+<backend_ip>/hints/challenge1/<1,2,3><br />
+<backend_ip>/hints/challenge2/<1,2,3><br />
+<backend_ip>/hints/challenge3/<1,2,3><br />
+
+** The backend_ip could be found in the Terraform output section or by viewing the IP address in the website's API requests.
 
 # Solutions
 
@@ -175,7 +167,7 @@ The solutions are available in the [solutions](solutions/) directory.
 
 The resources created with the deployment of AIGoat will have the following charges for the US-East region: 
 
-Total: **$0.9/hour** - TBD
+Average of: **$0.13/hour**
 
 
 # Contributors
