@@ -68,6 +68,9 @@ const ProductSearch = () => {
           <Upload {...props}>
             <Button icon={<UploadOutlined />}>Upload Photo</Button>
           </Upload>
+          <p style={{ marginTop: '8px', fontSize: '14px', color: '#888' }}>
+            Supported file types: jpg, jpeg
+          </p> {/* Added line for supported extensions */}
           <Button type="primary" onClick={handleUpload} style={{ marginTop: 16 }}>
             Search Products
           </Button>
