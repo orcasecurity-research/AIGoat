@@ -34,7 +34,8 @@ To upload the modified file to the bucket we will use this command:
 ```
 aws s3 cp ./product_ratings.csv s3://sagemaker-recommendation-bucket-q37ltzqo/product_ratings.csv --no-sign-request --acl bucket-owner-full-control
 ```
-Updating the model might take some time, as noted in the website.
+
+**Updating the model might take some time, as noted in the website.**
 
 After waiting afew minutes, we refrresh the reccomendation page and see Orci:
 

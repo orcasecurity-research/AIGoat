@@ -45,7 +45,7 @@ def retrain_model():
             'S3OutputPath': f's3://{s3_bucket_uri}/'
         },
         ResourceConfig={
-            'InstanceType': 'ml.m5.2xlarge',
+            'InstanceType': 'ml.m5.4xlarge',
             'InstanceCount': 1,
             'VolumeSizeInGB': 30
         },
@@ -86,7 +86,7 @@ def retrain_model():
     )
     logger.info("done model creation")
     # Create endpoint configuration
-    endpoint_config_name = f'endpoint-config-{int(time.time())}'
+    endpoint_config_name = f'endpoint-config-1722516468'
     sm_client.create_endpoint_config(
         EndpointConfigName=endpoint_config_name,
         ProductionVariants=[
@@ -94,7 +94,7 @@ def retrain_model():
                 'VariantName': 'AllTraffic',
                 'ModelName': model_name,
                 'InitialInstanceCount': 1,
-                'InstanceType': 'ml.t2.2xlarge'
+                'InstanceType': 'ml.m5.4xlarge'
             }
         ]
     )

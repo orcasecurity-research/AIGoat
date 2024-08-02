@@ -43,7 +43,6 @@ resource "aws_s3_bucket_policy" "s3_bucket_policy" {
       "Action": [
         "s3:ListBucket",
         "s3:GetObject",
-        "s3:PutObject",
         "s3:DeleteObject",
         "s3:PutBucketPolicy"
       ],
@@ -51,6 +50,19 @@ resource "aws_s3_bucket_policy" "s3_bucket_policy" {
         "${aws_s3_bucket.sagemaker_recommendation_bucket.arn}",
         "${aws_s3_bucket.sagemaker_recommendation_bucket.arn}/*"
       ]
+    },
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Resource": "${aws_s3_bucket.sagemaker_recommendation_bucket.arn}/*",
+      "Condition": {
+        "StringEquals": {
+          "s3:x-amz-acl": "bucket-owner-full-control"
+        }
+      }
     }
   ]
 }

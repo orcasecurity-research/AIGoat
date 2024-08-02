@@ -134,7 +134,7 @@ password: doodoo123
 ```
 **Goal:** Manipulate the AI model to recommend a product - Orca Doll, which is not visible in the catalog for the provided user.
 
-** Note: The Orca Doll product is not visible in the catalog.
+** Note: When attempting to upload bucket resources using AWS CLI, you will need to use the flag --acl bucket-owner-full-control since the bucket enforces it **
 
 **Challenge 3:** Output Integrity Attack
 For this challenge, the application features a content and spam filtering AI system that checks each comment a user attempts to add to a product page. The AI determines whether the comment is allowed or not. This module demonstrates vulnerabilities in the model output integrity, where attackers can manipulate the AI system to bypass content filtering.<br />
