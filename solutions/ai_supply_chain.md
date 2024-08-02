@@ -64,3 +64,7 @@ and we have here a file named sensitive_data.txt! lets just read its contents:
 "{user_recommendations_dataset: sagemaker-recommendation-bucket-q37ltzqo}"
 ```
 And that's it - we've succesfully finished the first challenge.
+
+
+https://github.com/user-attachments/assets/e1aa8d50-e448-43e1-a014-3f9e18818a30
+
