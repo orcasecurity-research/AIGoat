@@ -37,5 +37,6 @@ We can see the 'is_offensive' and 'probability' values are sent with the request
 We can see the system accepted our values and posted the comment we sent
 
 
+https://github.com/user-attachments/assets/d19bccbf-1b96-477d-bb4d-0974215fe43f
 
 
