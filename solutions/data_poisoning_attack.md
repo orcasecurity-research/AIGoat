@@ -42,3 +42,7 @@ After waiting afew minutes, we refrresh the reccomendation page and see Orci:
 ![image](https://github.com/user-attachments/assets/0dbe75db-d33d-40ec-923c-b35335a9c8b0)
 
 And we finished challenge number 2!
+
+
+https://github.com/user-attachments/assets/c2366bd9-12fb-4d0c-be91-ee49dc7e0e8b
+
