@@ -21,7 +21,6 @@
 * [Contributors](#Contributors)
 * [Presented at](#Presented-at)
 * [Contribution Guidelines](#Contribution-Guidelines)
-* [License](#License)
 
 # Description
 
