@@ -185,9 +185,3 @@ Shir Sadon, Security Researcher, Orca Security <shir.sadon@orca.security>
 * Contributions in the form of code improvements, module updates, feature improvements, and any general suggestions are welcome. 
 * Improvements to the functionalities of the current modules are also welcome. 
 * The source code for each module can be found in ``terraform/modules/<module_name>/main.tf`` this can be used to modify the existing application code.
-
-# License
-
-This program is free software: you can redistribute it and/or modify it under the terms of the MIT License.
-
-You should have received a copy of the MIT License along with this program. If not, see https://opensource.org/licenses/MIT.
