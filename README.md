@@ -98,15 +98,13 @@ git clone https://github.com/orcasecurity-research/AIGoat
 aws configure
 ```
 
-**Step 3.** Traverse into the respective modules' directory and use terraform to deploy AWSGoat
+**Step 3.** Traverse into the terraform directory and use terraform to deploy AIGoat
 ```sh
 cd terraform
 terraform init
 terraform apply --auto-approve
 ```
 
-<p style="background-color:#843838;"><strong>Important note: To destroy the infrastructure you can use the Terraform destroy Github action/or run the command Terraform destroy if you used the manual installation. HOWEVER, please note that the destroy action will not delete the Sagemaker endpoints resources created and it should be done manually.</strong></p>
- 
 
 # Challenges
 
@@ -178,6 +176,7 @@ Shir Sadon, Security Researcher, Orca Security <shir.sadon@orca.security>
 ## Presented at
 
 - [Appsec Village DC 32: Arsenal](https://www.appsecvillage.com/events/dc-2024/arsenal-ai-goat-707694)
+- [OWASP Global AppSec San Francisco 2024](https://owasp2024globalappsecsanfra.sched.com/event/1g3Ym/ai-goat-a-damn-vulnerable-ai-infrastructure)
 
 ## Contribution Guidelines
 

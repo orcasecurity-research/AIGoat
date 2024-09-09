@@ -73,3 +73,17 @@ resource "null_resource" "sleep_after_modules" {
   ]
 }
 
+
+resource "null_resource" "cleanup_sagemaker_resources" {
+  provisioner "local-exec" {
+    when    = "destroy"
+    command = <<EOT
+      chmod +x scripts/cleanup_sagemaker.sh
+      scripts/cleanup_sagemaker.sh
+    EOT
+  }
+
+  triggers = {
+    always_run = timestamp()
+  }
+}
