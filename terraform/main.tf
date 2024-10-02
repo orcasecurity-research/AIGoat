@@ -12,6 +12,7 @@ provider "aws" {
 #  profile = var.profile
   region  = var.region
 }
+
 resource "aws_dynamodb_table" "terraform_locks" {
   name         = "mycomponents_tf_lockid"
   billing_mode = "PAY_PER_REQUEST"
