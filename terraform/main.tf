@@ -10,7 +10,7 @@ terraform {
 
 provider "aws" {
 #  profile = var.profile
-  region  = var.region
+  region = var.region
 }
 
 resource "aws_dynamodb_table" "terraform_locks" {
@@ -25,6 +25,7 @@ resource "aws_dynamodb_table" "terraform_locks" {
 }
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "mycomponents-tfstate"
+  region = var.region
  
   # Prevent accidental deletion of this S3 bucket
   lifecycle {
