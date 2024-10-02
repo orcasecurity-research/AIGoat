@@ -17,13 +17,13 @@ resource "aws_s3_bucket" "sagemaker_similar_images_bucket" {
   force_destroy = true
 }
 
-resource "aws_s3_bucket_object" "lambda_deployment_package" {
+resource "aws_s3_object" "lambda_deployment_package" {
   bucket = aws_s3_bucket.sagemaker_similar_images_bucket.id
   key    = "lambda/my_deployment_package.zip"
   source = "resources/supply_chain/my_deployment_package.zip"
 }
 
-resource "aws_s3_bucket_object" "sagemaker_similar_images_bucket" {
+resource "aws_s3_object" "sagemaker_similar_images_bucket" {
   for_each = fileset("../frontend/public/images/toys/", "**")
   bucket   = aws_s3_bucket.sagemaker_similar_images_bucket.id
   key      = "product-pictures/${each.value}"
@@ -149,7 +149,7 @@ resource "aws_iam_role_policy" "sagemaker_additional_policy" {
 resource "aws_lambda_function" "similar_images_lambda" {
 #  filename         = "resources/supply_chain/my_deployment_package.zip"  # Ensure this file contains your combined Lambda function code
   s3_bucket        = aws_s3_bucket.sagemaker_similar_images_bucket.id
-  s3_key           = aws_s3_bucket_object.lambda_deployment_package.key
+  s3_key           = aws_s3_object.lambda_deployment_package.key
   function_name    = "similar-images-lambda"
   role             = aws_iam_role.lambda_execution_role.arn
   handler          = "lambda_function.lambda_handler"

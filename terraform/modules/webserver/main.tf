@@ -42,7 +42,7 @@ data aws_iam_policy_document "sagemaker_access" {
 
 
 resource "aws_iam_role_policy" "sagemaker_policy" {
-  depends_on = ["aws_iam_role.ec2_iam_role"]
+  depends_on = [aws_iam_role.ec2_iam_role]
   name       = "sagemaker_policy"
   role       = aws_iam_role.ec2_iam_role.name
 
@@ -56,7 +56,7 @@ resource "aws_iam_role" "ec2_iam_role" {
 }
 
 resource "aws_iam_role_policy" "join_policy" {
-  depends_on = ["aws_iam_role.ec2_iam_role"]
+  depends_on = [aws_iam_role.ec2_iam_role]
   name       = "join_policy"
   role       = aws_iam_role.ec2_iam_role.name
 
