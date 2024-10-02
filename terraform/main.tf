@@ -25,7 +25,7 @@ resource "aws_dynamodb_table" "terraform_locks" {
 }
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "mycomponents-tfstate"
-  region = var.region
+  region = "eu-central-1"
  
   # Prevent accidental deletion of this S3 bucket
   lifecycle {
