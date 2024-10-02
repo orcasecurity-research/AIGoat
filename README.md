@@ -7,20 +7,23 @@
 
 ## Table of Contents
 
-* [Description](#Description)
-  * [Tech Stack](#Tech-Stack)
-  * [Vulnerabilities](#Vulnerabilities)
-* [Getting Started](#Getting-Started)
-  * [Prerequisites](#Prerequisites)
-  * [Usage](#Usage)
-  * [Manual Installation](#Manual-Installation)
-* [Challenges](#Challenges)
-* [Hints](#Hints)
-* [Solutions](#Solutions)
-* [Pricing](#Pricing)
-* [Contributors](#Contributors)
-* [Presented at](#Presented-at)
-* [Contribution Guidelines](#Contribution-Guidelines)
+- [AIGoat : A Deliberately Vulnerable AI Infrastructure](#aigoat--a-deliberately-vulnerable-ai-infrastructure)
+  - [Table of Contents](#table-of-contents)
+- [Description](#description)
+  - [Tech Stack](#tech-stack)
+  - [Vulnerabilities](#vulnerabilities)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Usage](#usage)
+    - [Manual Installation](#manual-installation)
+- [Challenges](#challenges)
+          - [Login with these credentials to view the recommendations:](#login-with-these-credentials-to-view-the-recommendations)
+- [Hints](#hints)
+- [Solutions](#solutions)
+- [Pricing](#pricing)
+- [Contributors](#contributors)
+  - [Presented at](#presented-at)
+  - [Contribution Guidelines](#contribution-guidelines)
 
 # Description
 
@@ -105,6 +108,19 @@ terraform init
 terraform apply --auto-approve
 ```
 
+To delete the resources created by Terraform, simply run the [destroy command](https://developer.hashicorp.com/terraform/cli/commands/destroy):
+
+  ```terraform
+  terraform destroy
+  ```
+
+Additionally, there is a convenient script if you get stuck in a Terraform twist [here](terraform/scripts/terraform_destroy.sh).
+
+If you accidentally remove your state file, we recommend using [terraformer](https://github.com/GoogleCloudPlatform/terraformer) to re-import everything back into state file, ie (then re-run the `terraform destroy`):
+
+  ```sh
+  terraformer import aws --resources="*" --regions us-east-1,us-east-2
+  ```
 
 # Challenges
 
