@@ -60,7 +60,6 @@ resource "aws_iam_policy" "terraform_s3_policy" {
 
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "mycomponents-tfstate"
-  region = "eu-central-1"
  
   # Prevent accidental deletion of this S3 bucket
   lifecycle {
