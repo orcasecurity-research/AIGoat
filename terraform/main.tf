@@ -13,7 +13,14 @@ provider "aws" {
   region = var.region
 }
 
+provider "aws" {
+#  profile = var.profile
+  alias = "tfstate"
+  region = "eu-central-1"
+}
+
 resource "aws_dynamodb_table" "terraform_locks" {
+  provider = aws.tfstate
   name         = "mycomponents_tf_lockid"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
@@ -59,6 +66,7 @@ resource "aws_iam_policy" "terraform_s3_policy" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
+  provider = aws.tfstate
   bucket = "mycomponents-tfstate"
  
   # Prevent accidental deletion of this S3 bucket
@@ -68,6 +76,7 @@ resource "aws_s3_bucket" "terraform_state" {
 }
 
 resource "aws_s3_bucket_versioning" "terraform_state" {
+  provider = aws.tfstate
   bucket = aws_s3_bucket.terraform_state.id
   versioning_configuration {
     status = "Enabled"
@@ -75,6 +84,7 @@ resource "aws_s3_bucket_versioning" "terraform_state" {
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" {
+  provider = aws.tfstate
   bucket = aws_s3_bucket.terraform_state.id
 
   rule {
@@ -85,6 +95,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" 
 }
 
 resource "aws_s3_bucket_public_access_block" "public_access" {
+  provider = aws.tfstate
   bucket                  = aws_s3_bucket.terraform_state.id
   block_public_acls       = true
   block_public_policy     = true
