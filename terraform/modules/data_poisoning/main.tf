@@ -87,26 +87,25 @@ resource "aws_s3_bucket_public_access_block" "public_access_allow" {
   restrict_public_buckets = false
 }
 
-
-resource "aws_s3_bucket_object" "lambda_deployment_package" {
+resource "aws_s3_object" "lambda_deployment_package" {
   bucket = aws_s3_bucket.sagemaker_recommendation_bucket.id
   key    = "lambda/get_rec_lambda.zip"
   source = "resources/data_poisoning/get_rec_lambda.zip"
 }
 
-resource "aws_s3_bucket_object" "sagemaker_recommendation_data" {
+resource "aws_s3_object" "sagemaker_recommendation_data" {
   bucket = aws_s3_bucket.sagemaker_recommendation_bucket.id
   key    = "product_ratings.csv"
   source = "resources/data_poisoning/product_ratings.csv"
 }
 
-resource "aws_s3_bucket_object" "sagemaker_recommendation_data_solution" {
+resource "aws_s3_object" "sagemaker_recommendation_data_solution" {
   bucket = aws_s3_bucket.sagemaker_recommendation_bucket.id
   key    = "old_product_ratings.csv"
   source = "resources/data_poisoning/old_product_ratings.csv"
 }
 
-resource "aws_s3_bucket_object" "sagemaker_retraining_data" {
+resource "aws_s3_object" "sagemaker_retraining_data" {
   for_each = fileset("resources/data_poisoning/code", "**/*")
   bucket = aws_s3_bucket.sagemaker_recommendation_bucket.id
   key    = "code/${each.value}"
@@ -235,7 +234,7 @@ resource "aws_iam_role_policy" "sagemaker_additional_policy" {
 # Lambda function
 resource "aws_lambda_function" "recommendation_lambda" {
   s3_bucket        = aws_s3_bucket.sagemaker_recommendation_bucket.id
-  s3_key           = aws_s3_bucket_object.lambda_deployment_package.key
+  s3_key           = aws_s3_object.lambda_deployment_package.key
   function_name    = "recommendation-lambda"
   role             = aws_iam_role.lambda_execution_role.arn
   handler          = "lambda_function.lambda_handler"

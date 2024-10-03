@@ -84,7 +84,7 @@ resource "aws_s3_bucket_public_access_block" "public_access_allow" {
   restrict_public_buckets = false
 }
 
-resource "aws_s3_bucket_object" "frontend_bucket" {
+resource "aws_s3_object" "frontend_bucket" {
   depends_on = [null_resource.update_frontend_urls]
   for_each = fileset("../frontend/out/", "**/*")
   bucket = aws_s3_bucket.frontend_bucket.id

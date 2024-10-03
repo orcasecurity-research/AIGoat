@@ -10,7 +10,102 @@ terraform {
 
 provider "aws" {
 #  profile = var.profile
-  region  = var.region
+  region = var.region
+}
+
+provider "aws" {
+#  profile = var.profile
+  alias = "tfstate"
+  region = "eu-central-1"
+}
+
+resource "aws_dynamodb_table" "terraform_locks" {
+  provider = aws.tfstate
+  name         = "mycomponents_tf_lockid"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "LockID"
+
+  attribute {
+    name = "LockID"
+    type = "S"
+  }
+}
+
+resource "aws_iam_policy" "terraform_s3_policy" {
+  name        = "TerraformS3DynamoDBPolicy"
+  description = "Policy for Terraform to access S3 and DynamoDB"
+  policy      = jsonencode({
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "s3:GetObject",
+          "s3:PutObject",
+          "s3:ListBucket"
+        ],
+        "Resource": [
+          "arn:aws:s3:::mycomponents-tfstate",
+          "arn:aws:s3:::mycomponents-tfstate/*"
+        ]
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "dynamodb:PutItem",
+          "dynamodb:GetItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:Scan",
+          "dynamodb:Query",
+          "dynamodb:UpdateItem"
+        ],
+        "Resource": "arn:aws:dynamodb:eu-central-1:YOUR_ACCOUNT_ID:table/mycomponents_tf_lockid"
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "attach_policy" {
+  role       = "YOUR_IAM_ROLE_NAME"
+  policy_arn = aws_iam_policy.terraform_s3_policy.arn
+}
+
+resource "aws_s3_bucket" "terraform_state" {
+  provider = aws.tfstate
+  bucket = "mycomponents-tfstate"
+ 
+  # Prevent accidental deletion of this S3 bucket
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
+resource "aws_s3_bucket_versioning" "terraform_state" {
+  provider = aws.tfstate
+  bucket = aws_s3_bucket.terraform_state.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" {
+  provider = aws.tfstate
+  bucket = aws_s3_bucket.terraform_state.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+  }
+}
+
+resource "aws_s3_bucket_public_access_block" "public_access" {
+  provider = aws.tfstate
+  bucket                  = aws_s3_bucket.terraform_state.id
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
 }
 
 module "vpc" {
@@ -73,10 +168,9 @@ resource "null_resource" "sleep_after_modules" {
   ]
 }
 
-
 resource "null_resource" "cleanup_sagemaker_resources" {
   provisioner "local-exec" {
-    when    = "destroy"
+    when    = destroy
     command = <<EOT
       chmod +x scripts/cleanup_sagemaker.sh
       scripts/cleanup_sagemaker.sh
