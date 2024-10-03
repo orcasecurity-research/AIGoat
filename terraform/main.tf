@@ -35,23 +35,23 @@ resource "aws_iam_policy" "terraform_s3_policy" {
   name        = "TerraformS3DynamoDBPolicy"
   description = "Policy for Terraform to access S3 and DynamoDB"
   policy      = jsonencode({
-    Version = "2012-10-17",
-    Statement = [
+    "Version": "2012-10-17",
+    "Statement": [
       {
-        Effect = "Allow",
-        Action = [
+        "Effect": "Allow",
+        "Action": [
           "s3:GetObject",
           "s3:PutObject",
           "s3:ListBucket"
         ],
-        Resource = [
+        "Resource": [
           "arn:aws:s3:::mycomponents-tfstate",
           "arn:aws:s3:::mycomponents-tfstate/*"
         ]
       },
       {
-        Effect = "Allow",
-        Action = [
+        "Effect": "Allow",
+        "Action": [
           "dynamodb:PutItem",
           "dynamodb:GetItem",
           "dynamodb:DeleteItem",
@@ -59,10 +59,15 @@ resource "aws_iam_policy" "terraform_s3_policy" {
           "dynamodb:Query",
           "dynamodb:UpdateItem"
         ],
-        Resource = "arn:aws:dynamodb:eu-central-1:YOUR_ACCOUNT_ID:table/mycomponents_tf_lockid"
+        "Resource": "arn:aws:dynamodb:eu-central-1:YOUR_ACCOUNT_ID:table/mycomponents_tf_lockid"
       }
     ]
   })
+}
+
+resource "aws_iam_role_policy_attachment" "attach_policy" {
+  role       = "YOUR_IAM_ROLE_NAME"
+  policy_arn = aws_iam_policy.terraform_s3_policy.arn
 }
 
 resource "aws_s3_bucket" "terraform_state" {
