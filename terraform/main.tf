@@ -9,8 +9,8 @@ terraform {
 }
 
 provider "aws" {
-#  profile = var.profile
-  region  = var.region
+    profile = "allie-vt"
+    shared_config_files = ["/Users/ahowe/.aws/config"]
 }
 
 module "vpc" {
