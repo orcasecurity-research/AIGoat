@@ -1,1 +1,26 @@
 terraform import module.data_poisoning.aws_iam_role.lambda_execution_role recommendation-api-role
+terraform import module.webserver.aws_iam_role.ec2_iam_role ec2_iam_role
+terraform import module.data_poisoning.aws_lambda_function.recommendation_lambda recommendation-lambda
+terraform import module.webserver.aws_key_pair.key-auth webserver-key
+terraform import aws_sagemaker_notebook_instance_lifecycle_configuration.sagemaker_lifecycle_config sagemaker-lifecycle-config-similar-images
+terraform import aws_iam_instance_profile.instance_profile instance_profile
+terraform import module.supply_chain.aws_sagemaker_notebook_instance_lifecycle_configuration.sagemaker_images_lifecycle_config sagemaker-lifecycle-config-similar-images
+terraform import module.supply_chain.aws_iam_role.lambda_execution_role similar-images-api-role
+# IAM Roles
+terraform import module.data_poisoning.aws_iam_role.lambda_execution_role comment-filter-role
+terraform import module.supply_chain.aws_iam_role.lambda_execution_role similar-images-api-role
+
+# IAM Instance Profile
+terraform import module.webserver.aws_iam_instance_profile.ec2_profile instance_profile
+
+# Lambda Functions
+terraform import module.data_poisoning.aws_lambda_function.retrain_model_lambda retrain-model-lambda
+
+# SageMaker Lifecycle Configs
+terraform import module.data_poisoning.aws_sagemaker_notebook_instance_lifecycle_configuration.sagemaker_recommendation_lifecycle_config sagemaker-lifecycle-config-recommendations
+terraform import module.output_integrity.aws_sagemaker_notebook_instance_lifecycle_configuration.sagemaker_lifecycle_config sagemaker-lifecycle-config
+terraform import module.supply_chain.aws_sagemaker_notebook_instance_lifecycle_configuration.sagemaker_images_lifecycle_config sagemaker-lifecycle-config-similar-images
+
+terraform import module.output_integrity.aws_iam_role.lambda_execution_role comment-filter-role
+terraform import module.supply_chain.aws_lambda_function.similar_images_lambda similar-images-lambda
+
