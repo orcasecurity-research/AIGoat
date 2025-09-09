@@ -242,7 +242,8 @@ resource "aws_sagemaker_notebook_instance" "similar_images_notebook" {
   role_arn                     = aws_iam_role.sagemaker_similar_images_execution_role.arn
   lifecycle_config_name        = aws_sagemaker_notebook_instance_lifecycle_configuration.sagemaker_images_lifecycle_config.name
   direct_internet_access       = "Enabled"
-  platform_identifier          = "notebook-al2-v1"
+  # platform_identifier          = "notebook-al2-v1"
+  platform_identifier          = "notebook-al2023-v1"
   subnet_id                    = var.subd_public
   security_groups              = [aws_security_group.sagemaker_images_sg.id]
 }
