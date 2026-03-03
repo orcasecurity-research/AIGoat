@@ -10,7 +10,7 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 import json
 from models import Product, Category, User, db, Comment, product_categories
 import boto3
-from botocore.exceptions import NoCredentialsError
+from botocore.exceptions import NoCredentialsError, ClientError
 from vulnerable_image_processor import process_image
 from sklearn.metrics.pairwise import cosine_similarity
 import pickle
@@ -236,8 +236,23 @@ def product_lookup():
 
         features_file_key = 'image_features.pkl'  # S3 key for the features file
 
-        response = s3.get_object(Bucket=bucket_name, Key=features_file_key)
-        features = pickle.loads(response['Body'].read())
+        try:
+            response = s3.get_object(Bucket=bucket_name, Key=features_file_key)
+            features = pickle.loads(response['Body'].read())
+        except ClientError as e:
+            if e.response['Error']['Code'] == 'NoSuchKey':
+                app.logger.error(
+                    'image_features.pkl not found in S3 bucket %s. '
+                    'Please run the image preprocessing pipeline in the SageMaker notebook first.',
+                    bucket_name
+                )
+                return jsonify({
+                    'error': (
+                        'Image features file not found. Please run the image preprocessing '
+                        'pipeline in the SageMaker notebook first. See README for setup instructions.'
+                    )
+                }), 503
+            raise
 
         payload = {
             'bucket_name': bucket_name,
